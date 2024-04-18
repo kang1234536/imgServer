@@ -53,9 +53,8 @@ app.post("/getImage", async (req, res) => {
     res.send(fBase64);
 });
 
-const port = 8080;
-app.listen(port, () => {
-  console.log(`Server is listening on port ${port}`);
+app.listen(process.env.PORT || 8080, () => {
+  console.log(`Server is listening on port`);
 });
 app.get('/', (req, res) =>{
     console.log('접속')
